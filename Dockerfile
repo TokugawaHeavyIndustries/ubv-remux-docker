@@ -7,4 +7,7 @@ COPY remux-amd64 /bin/
 COPY ffmpeg /bin/
 copy remuxscript.sh /bin/
 
+wget https://archive.org/download/ubnt_ubvinfo/ubnt_ubvinfo
+mv ubnt_ubvinfo /bin/
+
 ENTRYPOINT ["remuxscript.sh"]
