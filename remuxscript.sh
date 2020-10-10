@@ -5,13 +5,13 @@ PATH=$PATH:/remux
 ubv=$1
 audio=$2
 
-if [ "$audio" = "--with-audio" ] ; then
-	includeaud="--with-audio";
+if [ "$audio" = "-with-audio" ] ; then
+	includeaud="-with-audio";
 else
 	if [ -z "${audio}" ]; then
 		includeaud="";
 	else
-		echo "Issue parsing argument.  After your input directory or file, specify --with-audio to include audio remux, otherwise, leave empty.";
+		echo "Issue parsing argument.  After your input directory or file, specify -with-audio to include audio remux, otherwise, leave empty.";
 		exit 1
 	fi
 fi
