@@ -14,5 +14,6 @@ COPY remuxscript.sh /bin/
 
 RUN wget https://archive.org/download/ubnt_ubvinfo/ubnt_ubvinfo
 RUN mv ubnt_ubvinfo /bin/
+RUN chmod +x /bin/ubnt_ubvinfo
 
 ENTRYPOINT ["remuxscript.sh"]
