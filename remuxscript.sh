@@ -18,11 +18,11 @@ fi
 
 if [ -d "${ubv}" ] ; then
 	for f in $1/*.ubv; do
-		remux-amd64 $includeaud $f;
+		remux-amd64 $includeaud $f -output-folder SRC-FOLDER;
 	done
 else
 	if [ -f "${ubv}" ] ; then
-		remux-amd64 $includeaud $ubv;
+		remux-amd64 $includeaud $ubv -output-folder SRC-FOLDER;
 	else
 		echo "Issue parsing input";
 		exit 1
