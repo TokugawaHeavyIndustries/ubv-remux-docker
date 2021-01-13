@@ -24,11 +24,12 @@ tokugawaheavyindustries/ubv-remux-docker \
 -with-audio
 ```
 
-The last line, `/remux`, is the location of your ubv files.  As the volume map is static as `/remux`, this is sufficient to process all ubv files contained in the folder.  However, you may specify a single file to process:
+The line `/remux` is the location of your ubv files.  This is required.  As the volume map is static as `/remux`, this is sufficient to process all ubv files contained in the folder.  However, you may specify a single file to process:
 
 ```
 [...]
 tokugawaheavyindustries/ubv-remux-docker \
-/remux/B4FBE49E90A7_0_rotating_1586463298463.ubv \
--with-audio
+/remux/B4FBE49E90A7_0_rotating_1586463298463.ubv
 ```
+
+Note that the output files are saved in the /remux directory, so, `/somepath/somedir`
